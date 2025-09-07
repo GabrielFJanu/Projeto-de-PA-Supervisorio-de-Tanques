@@ -1,2 +1,3 @@
-# Projeto-de-PA-Supervisorio-de-Tanques
-Projeto de programação avançada: Supervisório de tanques
+# Projeto de programação avançada: Supervisório de tanques
+
+Utilizando paradigmas de POO, bibliotecas Qt de interface gráfica, STL e seus algoritmos e a biblioteca de sockets do windows, foi desenvolvido 3 programas em C++ (Cliente terminal, Cliente interface gráfica e Servidor terminal). Os programas clientes se comunicam com o programa servidor através da rede internet, por meio da utilização de sockets. O servidor apresenta toda a lógica de simulação dos tanques de água e controle de usuários, enquanto os clientes apresentam toda a lógica de controle/monitoramento sobre os tanques, podendo o usuário manipular e visualizar a bomba, as válvulas e níveis da água, atráves de comandos no terminal ou widgets interativos na interface gráfica.
