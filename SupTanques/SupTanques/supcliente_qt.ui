@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SupClienteQt</class>
+ <widget class="QMainWindow" name="SupClienteQt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>984</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Supervisorio - Tanques</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>360</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>360</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <widget class="QLabel" name="labelActuators">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>25</y>
+         <width>310</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>ACTUATORS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelV1">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>75</y>
+         <width>40</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Valve 1</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="buttonV1">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>75</y>
+         <width>75</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CLOSED</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="buttonV2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>75</y>
+         <width>75</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CLOSED</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelV2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>75</y>
+         <width>40</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Valve 2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelPumpSlider">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>125</y>
+         <width>40</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pump</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="sliderPump">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>125</y>
+         <width>270</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>65535</number>
+       </property>
+       <property name="singleStep">
+        <number>100</number>
+       </property>
+       <property name="pageStep">
+        <number>1000</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelSensors">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>225</y>
+         <width>310</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>SENSORS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelH1">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>285</y>
+         <width>25</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>H1</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdH1Cm">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>275</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdH1Perc">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>300</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdOverflow">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>325</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitH1Cm">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>275</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>cm</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitH1Perc">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>300</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitH2Cm">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>275</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>cm</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdH2Cm">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>275</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdH2Perc">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>300</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitH2Perc">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>300</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelH2">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>285</y>
+         <width>25</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>H2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelPump">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>385</y>
+         <width>40</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pump</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdPumpVal">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>375</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdPumpPerc">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>400</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitPumpPerc">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>400</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdFlowLMin">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>375</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitFlowLMin">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>375</y>
+         <width>30</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>l/min</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdFlowPerc">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>400</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitFlowPerc">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>400</y>
+         <width>20</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelFlow">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>385</y>
+         <width>25</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Flow</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelVisualization">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>500</y>
+         <width>310</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>VISUALIZATION</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="showLevel">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>545</y>
+         <width>70</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Level</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="showGraph">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>545</y>
+         <width>70</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Graph</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelRefresh">
+       <property name="geometry">
+        <rect>
+         <x>185</x>
+         <y>545</y>
+         <width>81</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Refresh period:</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinRefresh">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>545</y>
+         <width>50</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>200</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>20</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="unitRefreshS">
+       <property name="geometry">
+        <rect>
+         <x>325</x>
+         <y>545</y>
+         <width>10</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>s</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>984</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuConnection">
+    <property name="title">
+     <string>Connection</string>
+    </property>
+    <addaction name="actionLogin"/>
+    <addaction name="actionLogout"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuConnection"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLogin">
+   <property name="text">
+    <string>Login...</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
